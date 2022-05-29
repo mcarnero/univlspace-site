@@ -1,3 +1,5 @@
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -14,15 +16,44 @@
 
 <hr style="clear: left;" />
 
-<a style="color: white;" href="index.jsp">Inicio</a> |
-<a style="color: white;" href="calificaciones.jsp">Calificaciones</a> |
-<a style="color: white;" href="horarios.jsp">Horarios</a> |
-<a style="color: white;" href="contacto.jsp">Contacto</a> |
-<a style="color: white;" href="acerca.jsp">Acerca de Nosotros</a>
+<h2 style="color: white;"> Iniciar sesión </h2>
 
-<hr/>
+<form action="login" method="post">
+<table>
+	<tr>
+		<td><label style="color: white;">Usuario</label></td>
+		<td><input type="text" name="usuario"></td>
+	</tr>
+	
+	<tr>
+		<td><label style="color: white;">Password</label></td>
+		<td><input type="password" name="password"></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td><button type="submit"> Entrar </button></td>
+	</tr>
+</table>
+</form>
 
-<h2 style="color: white;">Bienvenido a la plataforma de la Universidad Nacional Intergaláctica</h2>
+<table>
+
+	<tr>
+		<td><strong style="color: white;"><c:out value="${respuesta}" /></strong></td>
+		<td><strong><%-- ${respuesta} --%></strong></td>
+	</tr>
+
+	<tr>
+		<td><a href="creaCuenta.jsp">Crea cuenta nueva</a></td>
+		<td><a href="recuperar.jsp">Recuperar Contraseña</a></td>
+	</tr>
+	
+	<tr>
+		<td><a href="#">Entrar con cuenta de Facebook</a></td>
+		<td><a href="#">Entrar con cuenta de Google</a></td>
+	</tr>
+</table>
 
 </body>
 </html>

@@ -29,7 +29,8 @@
 
 <hr style="clear: left;" />
 
-<h2 style="color: white;">Horarios del alumno: </h2>
+<strong style="color: white;">${respuesta}</strong>
+<h2 style="color: white;">Bienvenido a la plataforma de la Universidad Nacional Intergaláctica.</h2>
 
 </body>
 </html>
